@@ -1,6 +1,15 @@
+# Создаем генератор паролей
 
-print("Hello world!!!")
+import random
 
-x=121
-c=x*155
-print(c)
+alph = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM~!@#$%&*()_1234567890'
+
+number = int( input('Какое количество паролей необходимо? '))
+lenght = int( input('Какая нужна длина пароля? '))
+
+for x in range( number ):
+    password = ''
+
+    for i in range (lenght):
+        password+=random.choice( alph )
+    print(password)
